@@ -4,6 +4,52 @@ eSTEPS para E0 (extrusor) modificado segun fabricante de REVO (930)
 Modificacion de MARGENES de cama, por medidas de cama original BIQU, para q el PROBE alcance los bordes
 Funciones de FAN de capa - por PWM en FN0 y FN - Conector de SKR controladora de FAN al CRAB - 
 
+## IMPORTANTE Sobre Modelos SKR2:
+existen dos modelos basicos:
+
+🔧 1. SKR 2 (a secas)
+Nombre completo: BIGTREETECH SKR 2
+
+MCU: STM32F407VGT6 (Cortex-M4)
+
+Procesador a 168 MHz
+
+Puerto USB tipo B
+
+Usa jumpers para seleccionar drivers TMC UART/SPI
+
+Muy común en configuraciones avanzadas (BLTouch, Revo, Klipper, etc.)
+
+🔧 2. SKR 2 F429 (o SKR 2 F)
+A veces listada como SKR 2 F429
+
+MCU más potente: STM32F429ZGT6
+
+Más RAM y capacidad de procesamiento
+
+Compatibilidad mejorada con Marlin 2.1+ y Klipper
+
+Visualmente muy similar, pero algunas serigrafías en el PCB pueden decir F429
+
+🧩 ¿Cómo saber cuál tenés?
+Mirá el chip principal (es grande, cuadrado, de pines finitos). Dice:
+
+STM32F407VGT6 → es la SKR 2
+
+STM32F429ZGT6 → es la SKR 2 F429
+
+O mirá en el costado de la placa: algunos modelos traen serigrafiado el nombre exacto.
+
+📌 Importante al compilar:
+En PlatformIO (platformio.ini), elegí el entorno correcto:
+
+Para SKR 2 (F407):
+[env:BIGTREE_SKR_2]
+board = STM32F407VGT6
+
+Para SKR 2 F429:
+[env:BIGTREE_SKR_2_F429]
+board = STM32F429ZGT6
 
 # Marlin 3D Printer Firmware
 
