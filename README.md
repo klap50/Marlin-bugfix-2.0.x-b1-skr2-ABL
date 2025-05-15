@@ -1,3 +1,10 @@
+# Marlin para BIQU B1 - con SKR2 + Extrusor REVO H2 V2S
+ABL - Con 7 puntos por eje X y 7 puntos para eje Y
+eSTEPS para E0 (extrusor) modificado segun fabricante de REVO (930)
+Modificacion de MARGENES de cama, por medidas de cama original BIQU, para q el PROBE alcance los bordes
+Funciones de FAN de capa - por PWM en FN0 y FN - Conector de SKR controladora de FAN al CRAB - 
+
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
